@@ -1,0 +1,130 @@
+package selenium;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LocatorsPractice {
+
+	public static void main(String[] args) {
+		String url = "https://rahulshettyacademy.com/locatorspractice/";
+		String user = "rahul";
+		String password = "rahul";
+		String email = "rahulshetty@gmail,com";
+		String phonenumber = "9191919191";
+
+// UserLogin Page
+
+		By username = By.id("inputUsername");
+		By passwordField = By.name("inputPassword");
+		By rememberMe = By.name("chkboxOne");
+		By signBtn = By.xpath("//button[text()='Sign In']");
+		By Error = By.cssSelector(".error");
+		By ForGotPassword = By.cssSelector(".forgot-pwd-container a");
+
+// Forgot Password Details
+
+		By ForgotPasswordName = By.xpath("//input[@placeholder='Name']");
+		By ForgotPasswordEmail = By.xpath("//input[@placeholder='Email']");
+		By ForgotPasswordPhoneNumber = By.xpath("//input[@placeholder='Phone Number']");
+		By ResetLogin = By.className("reset-pwd-btn");
+		By infoMsg = By.className("infoMsg");
+		By gotologin= By.className("go-to-login-btn");
+		
+// after login successfull
+		By header = By.xpath("//h2");
+		
+		WebDriver driver = new ChromeDriver();
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		driver.get(url);
+
+		WebElement usernameField = driver.findElement(username);
+		usernameField.sendKeys(user);
+
+		WebElement passwordField1 = driver.findElement(passwordField);
+		passwordField1.sendKeys(password);
+
+		WebElement RememberMeCheckBox = driver.findElement(rememberMe);
+
+		RememberMeCheckBox.click();
+
+		WebElement SignBtn = driver.findElement(signBtn);
+
+		SignBtn.click();
+
+		WebElement ErrorMsg = driver.findElement(Error);
+
+		System.out.println(ErrorMsg.getText());
+
+		if (ErrorMsg.getText().equals("* Incorrect username or password")) {
+
+			System.out.println("If Condition Satified");
+			WebElement ForgotPasswordBtn = driver.findElement(ForGotPassword);
+			ForgotPasswordBtn.click();
+
+			WebElement Name = driver.findElement(ForgotPasswordName);
+			Name.sendKeys(user);
+
+			WebElement Email = driver.findElement(ForgotPasswordEmail);
+			Email.sendKeys(email);
+
+			WebElement ContactNumber = driver.findElement(ForgotPasswordPhoneNumber);
+			ContactNumber.sendKeys(phonenumber);
+
+			WebElement resetLogin = driver.findElement(ResetLogin);
+			resetLogin.click();
+
+			WebElement Info = driver.findElement(infoMsg);
+			System.out.println(Info.getText());
+
+			String[] ExtractPassword = Info.getText().split("'");
+
+			for (String pass : ExtractPassword) {
+				System.out.println(pass);
+			}
+			
+			String ExtractedPassword =  ExtractPassword[1];
+			
+			System.out.println("ExtractedPassword= "+ExtractedPassword);
+			
+			WebElement GotoLoginBtn = driver.findElement(gotologin);
+			GotoLoginBtn.click();
+			
+			
+			WebElement usernameField1 = driver.findElement(username);
+			usernameField1.sendKeys(user);
+
+			WebElement passwordField2 = driver.findElement(passwordField);
+			passwordField2.sendKeys(ExtractedPassword);
+
+//			WebElement RememberMeCheckBox2 = driver.findElement(rememberMe);
+//
+//			RememberMeCheckBox2.click();
+
+			WebElement SignBtn2 = driver.findElement(signBtn);
+
+			SignBtn2.click();	
+			
+			//By header = By.xpath("//h2");
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			WebElement headerText = driver.findElement(header);
+			
+			String actual = headerText.getText();
+			
+			if(actual.equals(user)) {
+				System.out.println("User "+user+" is logged in successfully");
+			}
+		}
+	}
+
+}

@@ -1,0 +1,20 @@
+package selenium;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Intro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//invoking the browser
+
+		//chrome-browser -> chromedriver-> methods
+		
+		WebDriver driver = new ChromeDriver();
+		
+		
+		
+	}
+
+}
