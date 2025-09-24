@@ -1,0 +1,18 @@
+package selenium;
+
+public class Intro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//invoking the browser
+
+		//chrome-browser -> chromedriver-> methods
+		
+		ChromeDriver driver = new ChromeDriver();
+		
+		
+		
+	}
+
+}
