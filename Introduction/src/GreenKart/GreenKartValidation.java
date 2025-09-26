@@ -47,7 +47,7 @@ public class GreenKartValidation {
 		 * } }
 		 */
 		int j = 0;
-		String[] itemsNeeded = { "Cucumber", "Brocolli", "Beetroot" };
+		String[] itemsNeeded = { "Cucumber", "Brocolli", "Beetroot", "Carrot" };
 		
 		for (int i = 0; i < products.size(); i++) {
 
@@ -62,7 +62,7 @@ public class GreenKartValidation {
 
 				j++;
 				
-				//driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
+				//driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
 				// Find the button inside the same product card
 		        WebElement addToCartBtn = products.get(i).findElement(By.xpath("following-sibling::div/button"));
 		        addToCartBtn.click();
