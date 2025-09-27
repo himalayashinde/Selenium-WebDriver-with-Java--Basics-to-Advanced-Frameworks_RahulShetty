@@ -50,6 +50,7 @@ public class calendarTest {
 			System.out.println(element.getAttribute("value"));
 			Assert.assertEquals(element.getAttribute("value"), expectedList[i++]);
 		}
+		
 		driver.close();
 	}
 
