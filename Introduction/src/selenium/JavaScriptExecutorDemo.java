@@ -56,7 +56,6 @@ public class JavaScriptExecutorDemo {
 		
 		Assert.assertEquals(sum, tamt);
 
-
 		driver.quit();
 	}
 
