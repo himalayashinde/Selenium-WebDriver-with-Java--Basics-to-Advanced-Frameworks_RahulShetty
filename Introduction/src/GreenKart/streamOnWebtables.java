@@ -12,8 +12,7 @@ import org.testng.Assert;
 public class streamOnWebtables {
 
 	public static void main(String[] args) throws Exception {
-		
-		
+				
 		String url = "https://rahulshettyacademy.com/seleniumPractise/#/offers";
 				
 		WebDriver driver = new ChromeDriver();
@@ -40,17 +39,23 @@ public class streamOnWebtables {
 				
 		Assert.assertTrue(originalList.equals(sortedList));
 		
+		List<String> price;
 		
-		List<String> price = elementsList.stream().filter(s->s.getText().contains("Beans"))
+	do {	
+		 List<WebElement> rows = driver.findElements(By.xpath(" //tr/td[1]"));	
+		price = rows.stream().filter(s->s.getText().contains("Rice"))
 		.map(s->getVeggiesPrice(s)).collect(Collectors.toList());
 		
 		price.forEach(a->System.out.println(a));
 		
-		
+		if(price.size()<1) {
+			
+			driver.findElement(By.xpath("//a[@aria-label='Next']")).click();
+		}
+	}while(price.size()<1);		
 		Thread.sleep(3000);
 		
-		driver.quit();		
-				
+		driver.quit();					
 
 	}
 
