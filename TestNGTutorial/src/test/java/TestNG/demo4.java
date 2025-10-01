@@ -1,5 +1,6 @@
 package TestNG;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class demo4 {
@@ -18,9 +19,11 @@ public class demo4 {
 		
 	}
 	
-	@Test
-	public void LoignHomeAPI() {
-		System.out.println("LoignHomeAPI called");
+	
+	@Parameters({"URL"})
+	@Test(groups= {"Smoke"})
+	public void LoignHomeAPI(String url) {
+		System.out.println("LoignHomeAPI called= "+url);
 	}
 	
 }

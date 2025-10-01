@@ -2,6 +2,7 @@ package TestNG;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class demo {
@@ -18,12 +19,12 @@ public class demo {
 		
 	}
 	
-	
-	@Test
-	public void secondTest() {
+	@Parameters({"URL","APIKey"})
+	@Test(groups= {"Smoke"})
+	public void secondTest(String url, String key) {
 		
-		System.out.println("Second Test created");
-		
+		System.out.println("Second Test created= " + url);
+		System.out.println(key);
 	}
 	
 	@BeforeTest
