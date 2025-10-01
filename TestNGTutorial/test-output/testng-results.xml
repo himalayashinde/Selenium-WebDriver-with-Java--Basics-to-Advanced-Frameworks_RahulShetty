@@ -1,29 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-01T16:15:52 IST" name="Default suite" finished-at="2025-10-01T16:15:52 IST" duration-ms="164">
+  <suite started-at="2025-10-01T16:37:18 IST" name="Default suite" finished-at="2025-10-01T16:37:18 IST" duration-ms="326">
     <groups>
     </groups>
-    <test started-at="2025-10-01T16:15:52 IST" name="Default test" finished-at="2025-10-01T16:15:52 IST" duration-ms="164">
-      <class name="TestNG.demo">
-        <test-method is-config="true" signature="executeAtFirst()[pri:0, instance:TestNG.demo@128d2484]" started-at="2025-10-01T16:15:52 IST" name="executeAtFirst" finished-at="2025-10-01T16:15:52 IST" duration-ms="22" status="PASS">
+    <test started-at="2025-10-01T16:37:18 IST" name="Default test" finished-at="2025-10-01T16:37:18 IST" duration-ms="326">
+      <class name="TestNG.demo3">
+        <test-method is-config="true" signature="beforeSuiteMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="beforeSuiteMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- executeAtFirst -->
-        <test-method signature="helloworld()[pri:0, instance:TestNG.demo@128d2484]" started-at="2025-10-01T16:15:52 IST" name="helloworld" finished-at="2025-10-01T16:15:52 IST" duration-ms="25" status="PASS">
+        </test-method> <!-- beforeSuiteMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="beforeMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- helloworld -->
-        <test-method signature="secondTest()[pri:0, instance:TestNG.demo@128d2484]" started-at="2025-10-01T16:15:52 IST" name="secondTest" finished-at="2025-10-01T16:15:52 IST" duration-ms="6" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="APILoignCar()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="APILoignCar" finished-at="2025-10-01T16:37:18 IST" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- secondTest -->
-        <test-method is-config="true" signature="executeAtLast()[pri:0, instance:TestNG.demo@128d2484]" started-at="2025-10-01T16:15:52 IST" name="executeAtLast" finished-at="2025-10-01T16:15:52 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- APILoignCar -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="afterMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- executeAtLast -->
-      </class> <!-- TestNG.demo -->
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="beforeMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="MobileLoginCarLoan()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="MobileLoginCarLoan" finished-at="2025-10-01T16:37:18 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MobileLoginCarLoan -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="afterMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="beforeMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="MobileSignInCarLoan()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="MobileSignInCarLoan" finished-at="2025-10-01T16:37:18 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MobileSignInCarLoan -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="afterMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="beforeMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="MobileSignOutCarLoan()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="MobileSignOutCarLoan" finished-at="2025-10-01T16:37:18 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MobileSignOutCarLoan -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="afterMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="beforeMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="WebLoginCarLoan()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="WebLoginCarLoan" finished-at="2025-10-01T16:37:18 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebLoginCarLoan -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@55182842]" started-at="2025-10-01T16:37:18 IST" name="afterMethod" finished-at="2025-10-01T16:37:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestNG.demo3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
