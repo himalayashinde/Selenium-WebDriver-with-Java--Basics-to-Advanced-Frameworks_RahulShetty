@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Loan Department]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Personal Loan(failed)">
-    <parameter name="APIKey" value="APIKEY-SHA256-AKJBDWDHHJFDHB"/>
-    <parameter name="URL" value="www.personalLoan.com"/>
-    <groups>
-      <run>
-        <include name="Smoke"/>
-      </run>
-    </groups>
+<suite parallel="tests" name="Failed suite [Loan Department]" guice-stage="DEVELOPMENT">
+  <parameter name="URL" value="www.google.com"/>
+  <listeners>
+    <listener class-name="TestNG.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Personal Loan(failed)">
     <classes>
       <class name="TestNG.demo2">
         <methods>
           <include name="PersonalLoan"/>
         </methods>
       </class> <!-- TestNG.demo2 -->
+      <class name="TestNG.demo">
+        <methods>
+          <include name="secondTest"/>
+          <include name="executeAtLast"/>
+          <include name="executeAtFirst"/>
+        </methods>
+      </class> <!-- TestNG.demo -->
     </classes>
   </test> <!-- Personal Loan(failed) -->
 </suite> <!-- Failed suite [Loan Department] -->
