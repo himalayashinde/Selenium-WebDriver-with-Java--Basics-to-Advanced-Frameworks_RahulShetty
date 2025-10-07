@@ -1,237 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="14" passed="9" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-07T11:01:48 IST" name="Loan Department" finished-at="2025-10-07T11:01:48 IST" duration-ms="427">
+  <suite started-at="2025-10-07T11:47:05 IST" name="Default suite" finished-at="2025-10-07T11:47:05 IST" duration-ms="156">
     <groups>
-      <group name="Smoke">
-        <method signature="demo.secondTest(java.lang.String,java.lang.String)[pri:0, instance:TestNG.demo@62379589]" name="secondTest" class="TestNG.demo"/>
-        <method signature="demo2.PersonalLoan(java.lang.String,java.lang.String)[pri:0, instance:TestNG.demo2@1d296da]" name="PersonalLoan" class="TestNG.demo2"/>
-        <method signature="demo3.MobileLoginCarLoan(java.lang.String)[pri:0, instance:TestNG.demo3@3a52dba3]" name="MobileLoginCarLoan" class="TestNG.demo3"/>
-        <method signature="demo4.LoignHomeAPI(java.lang.String)[pri:0, instance:TestNG.demo4@7817fd62]" name="LoignHomeAPI" class="TestNG.demo4"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-10-07T11:01:48 IST" name="Home Loan" finished-at="2025-10-07T11:01:48 IST" duration-ms="155">
-      <class name="TestNG.demo4">
-        <test-method signature="LoignHomeAPI(java.lang.String)[pri:0, instance:TestNG.demo4@7817fd62]" started-at="2025-10-07T11:01:48 IST" name="LoignHomeAPI" finished-at="2025-10-07T11:01:48 IST" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[www.google.com]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-10-07T11:47:05 IST" name="Default test" finished-at="2025-10-07T11:47:05 IST" duration-ms="156">
+      <class name="ps1">
+        <test-method is-config="true" signature="beforeRun()[pri:0, instance:ps1@6069db50]" started-at="2025-10-07T11:47:05 IST" name="beforeRun" finished-at="2025-10-07T11:47:05 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoignHomeAPI -->
-      </class> <!-- TestNG.demo4 -->
-      <class name="TestNG.demo3">
-        <test-method is-config="true" signature="beforeSuiteMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="beforeSuiteMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="27" status="PASS">
+        </test-method> <!-- beforeRun -->
+        <test-method signature="testRun()[pri:0, instance:ps1@6069db50]" started-at="2025-10-07T11:47:05 IST" name="testRun" finished-at="2025-10-07T11:47:05 IST" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuiteMethod -->
-      </class> <!-- TestNG.demo3 -->
-    </test> <!-- Home Loan -->
-    <test started-at="2025-10-07T11:01:48 IST" name="Personal Loan" finished-at="2025-10-07T11:01:48 IST" duration-ms="427">
-      <class name="TestNG.demo2">
-        <test-method signature="EMIcalculation(java.lang.String,java.lang.String)[pri:0, instance:TestNG.demo2@1d296da]" started-at="2025-10-07T11:01:48 IST" name="EMIcalculation" data-provider="getData" finished-at="2025-10-07T11:01:48 IST" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Username0]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Password0]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- testRun -->
+        <test-method is-config="true" signature="AfterRun()[pri:0, instance:ps1@6069db50]" started-at="2025-10-07T11:47:05 IST" name="AfterRun" finished-at="2025-10-07T11:47:05 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EMIcalculation -->
-        <test-method signature="EMIcalculation(java.lang.String,java.lang.String)[pri:0, instance:TestNG.demo2@1d296da]" started-at="2025-10-07T11:01:48 IST" name="EMIcalculation" data-provider="getData" finished-at="2025-10-07T11:01:48 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Username1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Password1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EMIcalculation -->
-        <test-method signature="EMIcalculation(java.lang.String,java.lang.String)[pri:0, instance:TestNG.demo2@1d296da]" started-at="2025-10-07T11:01:48 IST" name="EMIcalculation" data-provider="getData" finished-at="2025-10-07T11:01:48 IST" duration-ms="31" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Username2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Password2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EMIcalculation -->
-        <test-method signature="PersonalLoan(java.lang.String,java.lang.String)[pri:0, instance:TestNG.demo2@1d296da]" started-at="2025-10-07T11:01:48 IST" name="PersonalLoan" finished-at="2025-10-07T11:01:48 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'APIKey' is required by @Test on method PersonalLoan but has not been marked @Optional or defined
-in I:\Coding_journey\Selenium-WebDriver-with-Java--Basics-to-Advanced-Frameworks_RahulShetty\TestNGTutorial\testng.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'APIKey' is required by @Test on method PersonalLoan but has not been marked @Optional or defined
-in I:\Coding_journey\Selenium-WebDriver-with-Java--Basics-to-Advanced-Frameworks_RahulShetty\TestNGTutorial\testng.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PersonalLoan -->
-      </class> <!-- TestNG.demo2 -->
-      <class name="TestNG.demo">
-        <test-method is-config="true" signature="executeAtFirst()[pri:0, instance:TestNG.demo@62379589]" started-at="2025-10-07T11:01:48 IST" name="executeAtFirst" finished-at="2025-10-07T11:01:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- executeAtFirst -->
-        <test-method signature="helloworld()[pri:0, instance:TestNG.demo@62379589]" started-at="2025-10-07T11:01:48 IST" name="helloworld" finished-at="2025-10-07T11:01:48 IST" duration-ms="30" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- helloworld -->
-        <test-method signature="secondTest(java.lang.String,java.lang.String)[pri:0, instance:TestNG.demo@62379589]" started-at="2025-10-07T11:01:48 IST" name="secondTest" finished-at="2025-10-07T11:01:48 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'APIKey' is required by @Test on method secondTest but has not been marked @Optional or defined
-in I:\Coding_journey\Selenium-WebDriver-with-Java--Basics-to-Advanced-Frameworks_RahulShetty\TestNGTutorial\testng.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'APIKey' is required by @Test on method secondTest but has not been marked @Optional or defined
-in I:\Coding_journey\Selenium-WebDriver-with-Java--Basics-to-Advanced-Frameworks_RahulShetty\TestNGTutorial\testng.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- secondTest -->
-        <test-method is-config="true" signature="executeAtLast()[pri:0, instance:TestNG.demo@62379589]" started-at="2025-10-07T11:01:48 IST" name="executeAtLast" finished-at="2025-10-07T11:01:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- executeAtLast -->
-      </class> <!-- TestNG.demo -->
-    </test> <!-- Personal Loan -->
-    <test started-at="2025-10-07T11:01:48 IST" name="Car Loan" finished-at="2025-10-07T11:01:48 IST" duration-ms="288">
-      <class name="TestNG.demo3">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="beforeMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="MobileLoginCarLoan(java.lang.String)[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="MobileLoginCarLoan" finished-at="2025-10-07T11:01:48 IST" duration-ms="22" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[www.google.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileLoginCarLoan -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="afterMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="beforeMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="MobileSignInCarLoan()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="MobileSignInCarLoan" finished-at="2025-10-07T11:01:48 IST" duration-ms="14" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileSignInCarLoan -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="afterMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="beforeMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="MobileSignOutCarLoan()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="MobileSignOutCarLoan" finished-at="2025-10-07T11:01:48 IST" duration-ms="19" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileSignOutCarLoan -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="afterMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="beforeMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="WebLoginCarLoan()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="WebLoginCarLoan" finished-at="2025-10-07T11:01:48 IST" duration-ms="15" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WebLoginCarLoan -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.demo3@3a52dba3]" started-at="2025-10-07T11:01:48 IST" name="afterMethod" finished-at="2025-10-07T11:01:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- TestNG.demo3 -->
-    </test> <!-- Car Loan -->
-  </suite> <!-- Loan Department -->
+        </test-method> <!-- AfterRun -->
+      </class> <!-- ps1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
