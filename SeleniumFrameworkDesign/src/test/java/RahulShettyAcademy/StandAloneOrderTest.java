@@ -14,7 +14,7 @@ import org.testng.Assert;
 
 import RahulShettyAcademy.pageObjects.LandingPage;
 
-public class StandAloneTest {
+public class StandAloneOrderTest {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -26,22 +26,20 @@ public class StandAloneTest {
 		String password = "Himalaya@1234";
 		String productName= "iphone 13 pro";
 		
-		By userEmail = By.id("userEmail");
-		By userPassword = By.id("userPassword");
-		By loginbtn = By.id("login");
+//		By userEmail = By.id("userEmail");
+//		By userPassword = By.id("userPassword");
+//		By loginbtn = By.id("login");
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
-		driver.get(url);
-
-		driver.findElement(userEmail).sendKeys(user);
-		driver.findElement(userPassword).sendKeys(password);
-		driver.findElement(loginbtn).click();
-
+	
 		LandingPage landingpage = new LandingPage(driver);
+	
+		landingpage.goTo(url);
 		
+		landingpage.loginApplication(user, password);
 		
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));
