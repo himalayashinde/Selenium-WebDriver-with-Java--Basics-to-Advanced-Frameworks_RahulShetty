@@ -1,12 +1,13 @@
 package RahulShettyAcademy.pageObjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage {
+import RahulShettyAcademy.AbstractComponents.AbstractComponent;
+
+public class LandingPage extends AbstractComponent {
 
 //	String user = "himalayashinde@gmail.com";
 //	String password = "Himalaya@1234";
@@ -19,6 +20,7 @@ public class LandingPage {
 
 	public LandingPage(WebDriver driver) {
 		// initialization
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -41,13 +43,17 @@ public class LandingPage {
 	 * driver.findElement(loginbtn).click(); }
 	 */
 
-	public void loginApplication(String user,String password) {
+	public ProductCatalogue loginApplication(String user,String password) {
 		
 		userEmail.sendKeys(user);
 		
 		userPassword.sendKeys(password);
 		
 		submitBtn.click();
+		
+		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
+		
+		return productCatalogue;
 	}
 
 

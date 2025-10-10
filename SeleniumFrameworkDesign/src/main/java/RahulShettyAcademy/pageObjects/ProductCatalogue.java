@@ -8,12 +8,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProductCatalogue {
+import RahulShettyAcademy.AbstractComponents.AbstractComponent;
+
+public class ProductCatalogue extends AbstractComponent{
 
 	WebDriver driver;
 
 	public ProductCatalogue(WebDriver driver) {
 		// initialization
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,8 +26,39 @@ public class ProductCatalogue {
 	@FindBy(css= ".mb-3")
 	List<WebElement> products;
 
+	@FindBy(css= ".ng-animating")
+	WebElement spinner;
+	
+	By productsBy = By.cssSelector(".mb-3");
+	By addToCart = By.cssSelector(".card-body button:last-of-type");
+	By toastMessage = By.cssSelector("#toast-container");
 
+	public List<WebElement> getProductsList() {
+		
+		waitForElementToAppear(productsBy);
+		
+		return products;
+	}
 
+	public WebElement getProductByname(String productName) {
+		
+		WebElement prod = getProductsList().stream()
+				  .filter(product -> product.findElement(By.cssSelector("b")).getText().equalsIgnoreCase(productName)).findFirst()
+				  .orElse(null);
+	
+		return prod;
+	}
 	
 	
+	public void addProductToCart(String productName) {
+		
+		WebElement prod = getProductByname(productName);
+		
+		prod.findElement(addToCart).click();
+		
+		waitForElementToAppear(toastMessage);
+		
+		waitForElementToDisappear(spinner);
+		
+	}
 }
