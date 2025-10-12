@@ -9,13 +9,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
+import RahulShettyAcademy.AbstractComponents.AbstractComponent;
 import RahulShettyAcademy.pageObjects.LandingPage;
 
 public class BaseTest {
 
 	public WebDriver driver;
 	String url = "https://rahulshettyacademy.com/client";
+	public LandingPage landingpage;
 
 	public WebDriver initilizeDriver() throws Exception {
 
@@ -42,6 +46,7 @@ public class BaseTest {
 		return driver;
 	}
 
+	@BeforeMethod
 	public LandingPage launchApplication() throws Exception {
 
 		driver = initilizeDriver();
@@ -49,11 +54,18 @@ public class BaseTest {
 
 		// LandingPage
 
-		LandingPage landingpage = new LandingPage(driver);
+		landingpage = new LandingPage(driver);
 
 		landingpage.goTo(url);
-		
+
 		return landingpage;
 	}
 
+	@AfterMethod
+	public void tearDown() throws Exception {
+		
+			Thread.sleep(3000);
+		
+			driver.quit();
+	}
 }

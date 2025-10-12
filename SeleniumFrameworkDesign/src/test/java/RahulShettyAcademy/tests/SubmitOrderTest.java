@@ -13,7 +13,7 @@ import RahulShettyAcademy.pageObjects.ConfirmationPage;
 import RahulShettyAcademy.pageObjects.LandingPage;
 import RahulShettyAcademy.pageObjects.ProductCatalogue;
 
-public class StandAloneOrderTest extends BaseTest {
+public class SubmitOrderTest extends BaseTest {
 
 	String user = "himalayashinde@gmail.com";
 	String password = "Himalaya@1234";
@@ -22,7 +22,7 @@ public class StandAloneOrderTest extends BaseTest {
 	@Test
 	public void submitOrder() throws Exception {
 
-		LandingPage landingpage = launchApplication();
+		//LandingPage landingpage = launchApplication();
 
 		// ProductCatalogue
 
@@ -53,11 +53,13 @@ public class StandAloneOrderTest extends BaseTest {
 
 		String confimOrderMsg = confirmationPage.getConfirmationMessage();
 
-		Assert.assertTrue(confimOrderMsg.equalsIgnoreCase("Thankyou for the order."));
+		Assert.assertTrue(confimOrderMsg.equalsIgnoreCase("Thankyou for the order."));		
 
-		Thread.sleep(3000);
-		
-		driver.quit();
 	}
 
+	
+	@Test
+	public void OrderHistoryTest() {
+		
+	}
 }

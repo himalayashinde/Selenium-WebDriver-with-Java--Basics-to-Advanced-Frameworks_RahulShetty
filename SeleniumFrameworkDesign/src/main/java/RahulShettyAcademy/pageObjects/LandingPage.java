@@ -36,13 +36,10 @@ public class LandingPage extends AbstractComponent {
 	@FindBy(id = "login")
 	WebElement submitBtn;
 
-	// Perform login using the page object's locators and stored credentials
-	/*
-	 * public void login() { driver.findElement(userEmail).sendKeys(user);
-	 * driver.findElement(userPassword).sendKeys(password);
-	 * driver.findElement(loginbtn).click(); }
-	 */
-
+	@FindBy(css="[class*='flyInOut']")
+	WebElement errorMessage;
+	
+	
 	public ProductCatalogue loginApplication(String user,String password) {
 		
 		userEmail.sendKeys(user);
@@ -59,5 +56,12 @@ public class LandingPage extends AbstractComponent {
 
 	public void goTo(String url) {
 		driver.get(url);
+	}
+	
+	public String getErrorMessage() {
+		
+		waitForWebElementToAppear(errorMessage);
+		return errorMessage.getText();
+		
 	}
 }
