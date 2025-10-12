@@ -21,7 +21,7 @@ public class ErrorValidation extends BaseTest {
 	String password = "Himalaya@1234";
 	String productName = "iphone 13 pro";
 
-	@Test
+	@Test(groups= {"ErrorHandling"})
 	public void LoginErrorValidation() throws Exception {
 
 		// ProductCatalogue

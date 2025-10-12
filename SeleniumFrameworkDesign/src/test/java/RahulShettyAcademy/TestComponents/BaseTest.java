@@ -46,7 +46,7 @@ public class BaseTest {
 		return driver;
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public LandingPage launchApplication() throws Exception {
 
 		driver = initilizeDriver();
@@ -61,7 +61,7 @@ public class BaseTest {
 		return landingpage;
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() throws Exception {
 		
 			Thread.sleep(3000);

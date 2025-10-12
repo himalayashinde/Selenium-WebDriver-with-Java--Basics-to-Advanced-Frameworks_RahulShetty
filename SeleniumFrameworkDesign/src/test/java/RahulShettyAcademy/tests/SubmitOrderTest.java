@@ -10,7 +10,7 @@ import RahulShettyAcademy.TestComponents.BaseTest;
 import RahulShettyAcademy.pageObjects.CartPage;
 import RahulShettyAcademy.pageObjects.CheckoutPage;
 import RahulShettyAcademy.pageObjects.ConfirmationPage;
-import RahulShettyAcademy.pageObjects.LandingPage;
+import RahulShettyAcademy.pageObjects.OrderPage;
 import RahulShettyAcademy.pageObjects.ProductCatalogue;
 
 public class SubmitOrderTest extends BaseTest {
@@ -58,8 +58,13 @@ public class SubmitOrderTest extends BaseTest {
 	}
 
 	
-	@Test
+	@Test(dependsOnMethods= {"submitOrder"})
 	public void OrderHistoryTest() {
+		ProductCatalogue productCatalogue = landingpage.loginApplication(user, password);
+		
+		OrderPage ordersPage = productCatalogue.goToOrdersPage();
+		
+		Assert.assertTrue(ordersPage.VerifyOrderDisplay(productName));
 		
 	}
 }
